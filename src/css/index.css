@@ -4,7 +4,13 @@
 }
 
 /* Font */
-
+@font-face {
+    font-family: Banchero;
+    src: url("/public/font/Banchero-Bold.otf");
+}
+*{
+    font-family: Banchero;
+}
 
 /* Main */
 
