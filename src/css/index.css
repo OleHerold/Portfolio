@@ -12,6 +12,9 @@ html{
     background-color: var(--primary);
 }
 
-
+/* Header */
+header nav{
+    border-bottom: black 2px solid;
+}
 
 /* Button */
