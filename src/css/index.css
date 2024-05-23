@@ -1,26 +1,53 @@
 /* Colors */
-*{
-   
+* {
+  --primary: #f5e5cd;
+  --primary-content: #a26e21;
+  --primary-dark: #eccfa2;
+  --primary-light: #fdfbf7;
+
+  --secondary: #cdf5d1;
+  --secondary-content: #21a22d;
+  --secondary-dark: #a2ecaa;
+  --secondary-light: #f7fdf8;
+
+  --background: #f0f0ef;
+  --foreground: #fbfbfb;
+  --border: #e1dfde;
+
+  --copy: #282724;
+  --copy-light: #6b6761;
+  --copy-lighter: #928d87;
+
+  --success: #cdf5cd;
+  --warning: #f5f5cd;
+  --error: #f5cdcd;
+  --success-content: #21a221;
+  --warning-content: #a2a221;
+  --error-content: #a22121;
 }
 
 /* Font */
 @font-face {
-    font-family: Banchero;
-    src: url("/public/font/Banchero-Bold.otf");
+  font-family: Banchero;
+  src: url("/public/font/Banchero-Bold.otf");
 }
-*{
-    font-family: Banchero;
+* {
+  font-family: Banchero;
 }
 
 /* Main */
 
-html{
-    background-color: var(--primary);
+html {
+  background-color: var(--primary);
 }
 
 /* Header */
-header nav{
-    border-bottom: black 2px solid;
+header {
+  background-color: var(--secondary);
+}
+
+header nav {
+  border-bottom: black 2px solid;
 }
 
 /* Button */
