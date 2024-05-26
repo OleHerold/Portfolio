@@ -191,6 +191,12 @@ body {
 .button-container button {
   padding: 10px 20px;
   font-size: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+}
+
+.button-container button:hover {
+  border-bottom: #000 solid 3px;
 }
 
 .content {
