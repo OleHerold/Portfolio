@@ -25,12 +25,7 @@
   --copy-light: #6b6761;
   --copy-lighter: #928d87;
 
-  --success: #cdf5cd;
-  --warning: #f5f5cd;
-  --error: #f5cdcd;
-  --success-content: #21a221;
-  --warning-content: #a2a221;
-  --error-content: #a22121;
+  --header: #f0f0f2;
 
   --aboutme-bg: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
   --skills-bg: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -67,17 +62,26 @@ body {
   height: 10em;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(to bottom, #fff, #fff, #fff, rgba(0, 0, 0, 0));
+  background: linear-gradient(
+    to bottom,
+    var(--header),
+    var(--header),
+    var(--header),
+    rgba(0, 0, 0, 0)
+  );
   z-index: 1000; /* Ensure the header stays on top */
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #main-nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  justify-content: center;
   width: 100%;
+  margin-top: calc(10em / 8); /* Adjust this value to move the content up */
 }
 
 .nav-list {
@@ -92,18 +96,25 @@ body {
 .nav-item {
   position: relative;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--header);
   padding: 0 10px;
   display: flex;
   align-items: center;
 }
-
+.nav-item h1 {
+  font-size: 3em;
+}
+.nav-item a {
+  text-decoration: none;
+  color: var(--copy);
+  font-size: 1.3em;
+}
 .line {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background-color: black;
   z-index: 0;
   transform: translateY(-50%);
