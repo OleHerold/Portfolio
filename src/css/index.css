@@ -112,3 +112,7 @@ html,
 body {
   scroll-snap-type: y mandatory;
 }
+
+.section-inner-container {
+  padding-top: 5em;
+}
