@@ -39,8 +39,15 @@
   font-family: Banchero;
   src: url("/public/font/Banchero-Bold.otf");
 }
+@font-face {
+  font-family: MyScharf;
+  src: url("/public/font/MyScharf.otf");
+}
 * {
   font-family: Banchero;
+}
+header h1 {
+  font-family: MyScharf;
 }
 
 /* Main */
@@ -109,6 +116,30 @@ body {
   color: var(--copy);
   font-size: 1.3em;
 }
+.hover-effect {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+.hover-effect::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #000;
+  bottom: 0;
+  margin-bottom: -5px;
+  left: 50%;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+/* Hover effect */
+.hover-effect:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 .line {
   position: absolute;
   top: 40%;
