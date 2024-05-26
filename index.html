@@ -56,14 +56,41 @@
     </section>
     <section id="Project-Section" data-bg-gradient="var(--projects-bg)">
       <div class="centered-div">
-        <h1>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos optio,
-          officiis dicta nihil non reiciendis aspernatur eveniet harum nam at
-          facere cumque nulla, itaque laborum. Ullam hic esse maiores sit?Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Aut atque neque
-          eius architecto harum, vero autem repellat quasi dolorum ipsa totam
-          commodi, nam dolore maiores tempore officia labore at debitis!Lorem
-        </h1>
+        <div class="button-container">
+          <button onclick="showContent('content1')">Button 1</button>
+          <button onclick="showContent('content2')">Button 2</button>
+          <button onclick="showContent('content3')">Button 3</button>
+          <button onclick="showContent('content4')">Button 4</button>
+          <button onclick="showContent('content5')">Button 5</button>
+          <button onclick="showContent('content6')">Button 6</button>
+        </div>
+      </div>
+      <div id="content1" class="content">
+        <p>This is the content for Button 1.</p>
+      </div>
+      <div id="content2" class="content">
+        <p>This is the content for Button 2.</p>
+      </div>
+      <div id="content3" class="content">
+        <p>This is the content for Button 3.</p>
+      </div>
+      <div id="content4" class="content">
+        <p>This is the content for Button 4.</p>
+      </div>
+      <div id="content5" class="content">
+        <p>This is the content for Button 5.</p>
+      </div>
+      <div id="content6" class="content">
+        <p>This is the content for Button 6.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quidem
+          sapiente deserunt asperiores vel nesciunt optio placeat, mollitia,
+          laboriosam accusantium in quae sed explicabo reiciendis unde eum
+          impedit natus quam? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nulla aliquam voluptates exercitationem totam voluptas sint
+          numquam, voluptatum alias illum veniam saepe eum id incidunt, delectus
+          debitis molestiae dolore eos tempora?
+        </p>
       </div>
     </section>
     <section id="Contact-Section" data-bg-gradient="var(--contact-bg)">
@@ -114,6 +141,22 @@
           }
         });
       });
+      function showContent(contentId) {
+        var buttonContainer = document.querySelector(".button-container");
+        var currentContent = document.querySelector(".content.visible");
+        var newContent = document.getElementById(contentId);
+
+        if (currentContent) {
+          currentContent.classList.remove("visible");
+        }
+
+        if (currentContent !== newContent) {
+          newContent.classList.add("visible");
+          buttonContainer.classList.add("move-up");
+        } else {
+          buttonContainer.classList.remove("move-up");
+        }
+      }
     </script>
   </body>
 </html>
