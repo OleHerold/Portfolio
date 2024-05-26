@@ -31,6 +31,12 @@
   --success-content: #21a221;
   --warning-content: #a2a221;
   --error-content: #a22121;
+
+  --aboutme-bg: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  --skills-bg: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  --projects-bg: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  --contact-bg: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  --extra-bg: linear-gradient(135deg, #fdd6bd 0%, #f7c5a0 100%);
 }
 
 /* Font */
@@ -44,8 +50,12 @@
 
 /* Main */
 html {
-  background-color: var(--primary);
   scroll-behavior: smooth;
+}
+
+body {
+  transition: background 2s ease; /* Longer and smoother transition */
+  background-blend-mode: multiply;
 }
 
 /* Header */
@@ -54,17 +64,19 @@ html {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 5em;
+  height: 10em;
   box-sizing: border-box;
   overflow: hidden;
   background: linear-gradient(to bottom, #fff, #fff, #fff, rgba(0, 0, 0, 0));
   z-index: 1000; /* Ensure the header stays on top */
+  display: flex;
+  align-items: center;
 }
 
 #main-nav {
   display: flex;
-  align-items: center;
-  position: relative;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
   width: 100%;
 }
 
@@ -74,7 +86,6 @@ html {
   margin: 0;
   display: flex;
   gap: 20px;
-  position: relative;
   align-items: center;
 }
 
@@ -114,5 +125,5 @@ body {
 }
 
 .section-inner-container {
-  padding-top: 5em;
+  padding-top: 10em;
 }

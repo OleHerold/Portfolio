@@ -20,7 +20,7 @@
         </ul>
       </nav>
     </header>
-    <section id="Skills-Section">
+    <section id="Skills-Section" data-bg-gradient="var(--skills-bg)">
       <div class="section-inner-container">
         <h1>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos optio,
@@ -32,7 +32,7 @@
         </h1>
       </div>
     </section>
-    <section id="Project-Section">
+    <section id="Project-Section" data-bg-gradient="var(--projects-bg)">
       <div class="section-inner-container">
         <h1>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos optio,
@@ -45,6 +45,43 @@
       </div>
     </section>
 
-    <script src="/src/js/main.js"></script>
+    <script>
+      document.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const scrollPos = window.scrollY || window.pageYOffset;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          if (
+            scrollPos >= sectionTop &&
+            scrollPos < sectionTop + sectionHeight
+          ) {
+            document.body.style.background =
+              section.getAttribute("data-bg-gradient");
+          }
+        });
+      });
+
+      // Initial set of the background gradient
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const scrollPos = window.scrollY || window.pageYOffset;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          if (
+            scrollPos >= sectionTop &&
+            scrollPos < sectionTop + sectionHeight
+          ) {
+            document.body.style.background =
+              section.getAttribute("data-bg-gradient");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
