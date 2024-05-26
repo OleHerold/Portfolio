@@ -1,5 +1,12 @@
-/* Colors */
+/* CSS Reset */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
   --primary: #f5e5cd;
   --primary-content: #a26e21;
   --primary-dark: #eccfa2;
@@ -36,18 +43,54 @@
 }
 
 /* Main */
-
 html {
   background-color: var(--primary);
 }
 
 /* Header */
-header {
-  background-color: var(--secondary);
+#main-header {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  height: 5em;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures the gradient is always visible */
+  background: linear-gradient(to bottom, #fff, #fff, #fff, rgba(0, 0, 0, 0));
 }
 
-header nav {
-  border-bottom: black 2px solid;
+#main-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-/* Button */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+  z-index: 0;
+  transform: translateY(-50%);
+}
